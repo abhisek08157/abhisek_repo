@@ -1,0 +1,10 @@
+<div class="container">
+  <h2>📄 Student Detail</h2>
+  <p>Student ID: <strong>{{ studentId }}</strong></p>
+
+  <form (ngSubmit)="submitAge()">
+    <label for="age">Enter Your Age:</label><br />
+    <input type="number" [(ngModel)]="age" name="age" required /><br />
+    <button type="submit">Submit</button>
+  </form>
+</div>

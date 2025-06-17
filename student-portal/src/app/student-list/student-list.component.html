@@ -1,0 +1,19 @@
+<div class="container">
+  <h2>🎓 Student List</h2>
+  <ul class="student-list">
+    <li *ngFor="let student of students" class="student-card">
+
+      <!-- Red for id < 2 -->
+      <span *ngIf="student.id < 2" style="color: red; font-weight: bold;">
+        {{ student.name }}
+      </span>
+
+      <!-- Green for id >= 2 -->
+      <span *ngIf="student.id >= 2" style="color: green; font-weight: bold;">
+        {{ student.name }}
+      </span>
+
+      <button (click)="viewDetails(student.id)">View Details</button>
+    </li>
+  </ul>
+</div>
